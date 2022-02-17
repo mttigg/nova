@@ -4,6 +4,6 @@ function talk () {
   echo ""
   echo $1
   echo ""
-  cat ~/.nova/ascii.txt
+  cat ~/.nova/nova.txt
   sleep 1
 }
