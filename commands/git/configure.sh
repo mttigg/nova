@@ -2,12 +2,14 @@
 function configureGit () {
   echo "Configuring Git..."
   sleep 1
-  echo "\nWhat is your GitHub email?\n"
+  echo ""
+  echo "What is your GitHub email?"
+  echo ""
 
   read email
 
   echo ""
-  echo "\nWhat is your GitHub username?\n"
+  echo "What is your GitHub username?"
   echo ""
 
   read username

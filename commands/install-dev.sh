@@ -19,7 +19,7 @@ function installDev() {
 
   talk "Hello!"
 
-  talk "Let\'s set you up!"
+  talk "Let's set you up!"
 
   talk "Firstly you need git"
   installGit
@@ -29,7 +29,7 @@ function installDev() {
   talk "Hmm... I guess you need Node.js, give me a second here.";
   installNode
 
-  talk "Let\'s spruce up terminal experience"
+  talk "Let's spruce up terminal experience"
   installVim
   configureVim
   configureBash
@@ -40,7 +40,7 @@ function installDev() {
   pullMono
 
   talk "I finished your setup"
-  talk "I\'ll see you later";
+  talk "I'll see you later";
 
   sleep 1
 }
