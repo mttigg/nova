@@ -1,9 +1,9 @@
 # !/bin/bash
 function talk () {
   clear -x
+  cat ~/.nova/nova.txt
   echo ""
   echo $1
   echo ""
-  cat ~/.nova/nova.txt
   sleep 1
 }
