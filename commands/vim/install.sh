@@ -12,14 +12,7 @@ cp ~/git/gruvbox/colors/gruvbox.vim ~/.vim/colors/
 echo "Installing LanguageServers..."
 npm i -g typescript
 echo "Installing tmux..."
-sudo yum install autoconf
-sudo yum install automake
-cd ~/git
-git clone https://github.com/tmux/tmux.git
-cd tmux
-sh autogen.sh
-./configure && make
-cd ~
+sudo yum install tmux
 echo "Setting up tmux..."
 cp ~/.nova/.tmux.conf ~/.tmux.conf
 echo "-----Vim-Is-Now-Spruced-----\n\n"
