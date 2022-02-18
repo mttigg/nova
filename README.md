@@ -1,10 +1,18 @@
 # nova
+
 ## What is it?
 `nova` is a cli for tasks done on a regular basis. People started to want
 to use many of these tasks themselves so I made this general version of it.
-## API
-### setup:dev
-`nova setup:dev` will install `git`, `node`, `tmux`, `vim` and more
+Mostly this is a tool for setting up Javascript environments on the fly.
 
-### setup:base
-`nova setup:base` will install `tmux`, `vim`.
+## Install
+`cd ~`
+`git clone https://github.com/mtti-g/nova.git .nova`
+`source .nova/main.sh`
+
+## API
+### install:dev
+`nova install:dev` will install the essentials for js development
+
+## Todo
+[] have make more commands

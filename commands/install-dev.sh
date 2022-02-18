@@ -1,46 +1,36 @@
 # !/bin/bash
-source ~/.nova/commands/git/configure.sh
-source ~/.nova/commands/git/configure-github.sh
-source ~/.nova/commands/git/install.sh
-source ~/.nova/commands/internal/talk.sh
-source ~/.nova/commands/node/install.sh
-source ~/.nova/commands/vim/configure.sh
-source ~/.nova/commands/vim/install.sh
-source ~/.nova/commands/bash/configure.sh
-source ~/.nova/commands/git/pull-mono.sh
+talk "Initializing [..  ]"
+talk "Initializing [... ]"
+talk "Initializing [....]"
+sleep 1
 
-function installDev() {
-  talk "Initializing [.   ]"
-  talk "Initializing [..  ]"
-  talk "Initializing [... ]"
-  talk "Initializing [....]"
+talk "Hello!"
+sleep 1
 
-  sleep 2
+talk "Let's set you up!"
 
-  talk "Hello!"
+talk "Firstly you need git"
+~/.nova/commands/git/install.sh
+~/.nova/commands/git/configure.sh
+~/.nova/commands/git/configure-github.sh
+sleep 1
 
-  talk "Let's set you up!"
+talk "Hmm... I guess you need Node.js, give me a second here.";
+~/.nova/commands/node/install.sh
+sleep 1
 
-  talk "Firstly you need git"
-  installGit
-  configureGit
-  configureGitHub
+talk "Let's spruce up terminal experience"
+~/.nova/commands/vim/install.sh
+~/.nova/commands/vim/configure.sh
+~/.nova/commands/bash/configure.sh
+sleep 1
 
-  talk "Hmm... I guess you need Node.js, give me a second here.";
-  installNode
+talk "Okay..."
 
-  talk "Let's spruce up terminal experience"
-  installVim
-  configureVim
-  configureBash
+talk "Only thing left is to pull the repository..."
+~/.nova/commands/git/pull-mono.sh
+sleep 1
 
-  talk "Okay..."
-
-  talk "Only thing left is to pull the repository..."
-  pullMono
-
-  talk "I finished your setup"
-  talk "I'll see you later";
-
-  sleep 1
-}
+talk "I finished your setup"
+talk "I'll see you later";
+sleep 1

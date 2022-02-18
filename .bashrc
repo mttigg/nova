@@ -127,6 +127,4 @@ export NVM_DIR="$HOME/.nvm"
 export EDITOR="/usr/bin/vim"
 
 # Source nova cli
-source ~/.nova/.nova_commands.sh
-source ~/.nova/login.sh
-
+source ~/.nova/main.sh
