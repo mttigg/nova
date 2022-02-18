@@ -8,7 +8,7 @@ Mostly this is a tool for setting up Javascript environments on the fly.
 ## Install
 ```
 cd ~
-git clone https://github.com/meetgradient/nova.git .nova
+git clone https://github.com/mtti-g/nova.git .nova
 source .nova/main.sh
 ```
 
