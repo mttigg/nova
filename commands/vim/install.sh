@@ -14,5 +14,7 @@ function installVim () {
   npm i -g typescript
   echo "Installing tmux..."
   sudo yum install tmux
+  echo "Setting up tmux..."
+  cp ~/.nova/.tmux.conf ~/.tmux.conf
   echo "-----Vim-Is-Now-Spruced-----\n\n"
 }
