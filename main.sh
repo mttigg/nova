@@ -2,7 +2,7 @@
 source ~/.nova/commands/internal/talk.sh
 
 function nova() {
-  if [$1=="install:dev"]
+  if [ $1 == 'install:dev' ]
   then
     ~/.nova/commands/install-dev.sh
   else
