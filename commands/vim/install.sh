@@ -4,6 +4,7 @@ function installVim () {
   echo "Installing Plugin Manager..."
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   echo "Fetching colorscheme..."
+  cd ~/git
   git clone https://github.com/morhetz/gruvbox.git
   echo "Adding colorscheme Directory..."
   mkdir ~/.vim/colors
