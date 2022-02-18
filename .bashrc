@@ -128,4 +128,3 @@ export EDITOR="/usr/bin/vim"
 
 # Source nova cli
 source ~/.nova/main.sh
-source ~/.nova/login.sh

@@ -1,10 +1,11 @@
 # !/bin/bash
 source ~/.nova/commands/internal/talk.sh
+source ~/.nova/login
 
 function nova() {
   if [ $1 == 'install:dev' ]
   then
-    ~/.nova/commands/install-dev.sh
+    source ~/.nova/commands/install-dev.sh
   else
     talk "Hmm, I don't seem to recognize that command"
   fi
