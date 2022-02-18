@@ -32,5 +32,8 @@ function configureGitHub () {
   echo ""
 
   read -p "Press enter once you have entered in the key"
+
+  rm gh.pub
+
   echo "GitHub has been configured"
 }
