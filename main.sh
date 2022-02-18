@@ -1,6 +1,6 @@
 # !/bin/bash
 source ~/.nova/commands/internal/talk.sh
-source ~/.nova/login
+source ~/.nova/login.sh
 
 function nova() {
   if [ $1 == 'install:dev' ]
