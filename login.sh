@@ -1,17 +1,7 @@
 # !/bin/bash
-clear -x
+source ~/.nova/commands/internal/talk.sh
 
-echo "                     "
-cat ~/ascii.txt
+talk "Welcome back!"
+talk "Try not to break anything :P"
 
-echo "                     "
-echo " ~ Nova              "
-echo "                     "
-sleep 2
-echo "  Welcome back!"
-sleep 1
-echo "  But... Try not to make any bugs today..."
-echo "                     "
-sleep 1
 source "$HOME/.nova/start-ssh-agent.sh"
-echo "                     "
