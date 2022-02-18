@@ -1,7 +1,7 @@
 # !/bin/bash
 function configureGitHub () {
   echo "Configuring GitHub..."
-  email = $(git config user.email)
+  email=$(git config user.email)
   echo "Generating SSH key for GitHub..."
   ssh-keygen -t ed25519 -C $email -f gh
   echo "Moving SSH Key To Storage (~/.ssh)..."
