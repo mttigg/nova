@@ -1,21 +1,19 @@
 # !/bin/bash
-function configureGit () {
-  echo "Configuring Git..."
-  sleep 1
-  echo ""
-  echo "What is your GitHub email?"
-  echo ""
+echo "Configuring Git..."
+sleep 1
+echo ""
+echo "What is your GitHub email?"
+echo ""
 
-  read email
+read email
 
-  echo ""
-  echo "What is your GitHub username?"
-  echo ""
+echo ""
+echo "What is your GitHub username?"
+echo ""
 
-  read username
+read username
 
-  git config --global user.name $username
-  git config --global user.email $email
+git config --global user.name $username
+git config --global user.email $email
 
-  echo "Git has been configured"
-}
+echo "Git has been configured"
