@@ -6,13 +6,14 @@ to use many of these tasks themselves so I made this general version of it.
 Mostly this is a tool for setting up Javascript environments on the fly.
 
 ## Install
-`cd ~`
-`git clone https://github.com/mtti-g/nova.git .nova`
-`source .nova/main.sh`
-
+```
+cd ~
+git clone https://github.com/mtti-g/nova.git .nova
+source .nova/main.sh
+```
 ## API
 ### install:dev
-`nova install:dev` will install the essentials for js development
+`nova install:dev` will install the essentials for JS development
 
 ## Todo
-[] have make more commands
+[] make more commands
