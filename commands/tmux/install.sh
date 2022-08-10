@@ -26,10 +26,14 @@ sudo yum install ncurses-devel
 sudo yum install libevent
 sudo yum install libevent-devel
 sudo yum install automake
+sudo yum install make
+sudo yum install bison
+sudo yum install pkg-config
 sudo yum install autoconf
 sudo yum install gcc
 
 talk "Installing Tmux..."
+mkdir ~/git
 cd ~/git
 git clone https://github.com/tmux/tmux.git
 cd tmux
