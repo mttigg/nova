@@ -23,6 +23,7 @@ source ~/.nova/commands/node/install.sh
 sleep 1
 
 talk "Let's spruce up your terminal experience"
+source ~/.nova/commands/python/install.sh
 source ~/.nova/commands/tmux/install.sh
 source ~/.nova/commands/vim/install.sh
 source ~/.nova/commands/vim/configure.sh
