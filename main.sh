@@ -1,12 +1,17 @@
 # !/bin/bash
-source ~/.nova/commands/internal/talk.sh
-source ~/.nova/login.sh
+source ~/.nova/commands/talk.sh
 
 function nova() {
-  if [ $1 == 'install:dev' ]
+  if source "${HOME}/.nova/commands/${2}/${1}.sh"
   then
-    source ~/.nova/commands/install-dev.sh
+    sleep 1 
+    talk "successfully ${1}ed ${2}"
+  elif source "${HOME}/.nova/commands/${1}.sh ${2}"
+  then
+    sleep 1 
+    talk "successfully ${1}ed"
   else
-    talk "Hmm, I don't seem to recognize that command"
+    talk "Did you mean one of the following commands?"
+    ls "${HOME}/.nova/commands -d"
   fi
 }

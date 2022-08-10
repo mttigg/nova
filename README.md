@@ -1,18 +1,38 @@
 # nova
 
 ## What is it?
-`nova` is a cli for tasks done on a regular basis. People started to want
-to use many of these tasks themselves so I made this general version of it.
-Mostly this is a tool for setting up Javascript environments on the fly.
+Nova is a unix abstraction for system admins working on Amazon Linux 2
 
 ## Install
-`cd ~`
-`git clone https://github.com/mtti-g/nova.git .nova`
-`source .nova/main.sh`
+```bash
+cd ~
+git clone https://github.com/mtti-g/nova.git .nova
+source .nova/main.sh
+```
 
-## API
-### install:dev
-`nova install:dev` will install the essentials for js development
+## Documentation
+### install
+#### dev
+`nova install dev` will install everything nova can...
+#### vim
+`nova install vim` installs the latest version of vim with a suite of plugins for development
+#### tmux
+`nova install tmux` installs the latest version of tmux
+#### node
+`nova install node` installs node and nvm, feel free to adjust your node version later with `nvm i [version]`
+#### git
+`nova install git` installs git and adds a directory `~/git` for repositories to be stored
+### configure
+#### vim
+`nova configure vim` just moves a default `.vimrc` to your home directory
+#### git
+`nova configure git` prompts for your email and username to sign your commits with
+#### gh
+`nova configure gh` sets up a ssh key pair with github
+#### bash
+`nova configure bash` replaces the default bashrc and toprc and sets some default options
+
 
 ## Todo
-[] have make more commands
+[] create new commands on the fly `nova memorize shortlog "git log --one-line"` and using it `nova run shortlog`
+[] prompt for level of installation wanted `nova install vim --light`
