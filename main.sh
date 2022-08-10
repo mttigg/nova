@@ -11,7 +11,11 @@ function nova() {
     sleep 1 
     talk "successfully ${1}ed"
   else
+    if !tree
+    then
+      sudo yum install tree
+    fi
     talk "Did you mean one of the following commands?"
-    ls "${HOME}/.nova/commands -d"
+    tree "${HOME}/.nova/commands"
   fi
 }
