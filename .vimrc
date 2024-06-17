@@ -68,7 +68,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
   # Diagnostics
-  # Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 # colorscheme catppuccin_mocha
@@ -77,22 +77,39 @@ hi Normal guibg=NONE ctermbg=NONE
 
 #
 # Lsp Config
-#
-packadd lsp
+# using coc for now
+# packadd lsp
 # Goto code navigation.
-nmap <silent> [< :LspDiagFirst<CR>
-nmap <silent> [<Leader> :LspDiagPrev<CR>
-nmap <silent> ]<Leader> :LspDiagNext<CR>
-nmap <silent> <Leader>d :LspGotoDefinition<CR>zt
-nmap <silent> <Leader>t :LspGotoTypeDef<CR>zt
-nmap <silent> <Leader>i :LspGotoImpl<CR>zt
-nmap <silent> <Leader>r :LspShowReferences<CR>
-nmap <silent> <Leader>o :LspOutline<CR>
-nmap <silent> <Leader>h :LspHover<CR>:LspDiagCurrent<CR>
-nmap <silent> <Leader>D :LspPeekDefinition<CR>
-nmap <silent> <Leader>T :LspPeekTypeDef<CR>
-nmap <silent> <Leader>I :LspPeekImpl<CR>
-nmap <silent> <Leader>R :LspPeekReferences<CR>
+# nmap <silent> [< :LspDiagFirst<CR>
+# nmap <silent> [<Leader> :LspDiagPrev<CR>
+# nmap <silent> ]<Leader> :LspDiagNext<CR>
+# nmap <silent> <Leader>d :LspGotoDefinition<CR>zt
+# nmap <silent> <Leader>t :LspGotoTypeDef<CR>zt
+# nmap <silent> <Leader>i :LspGotoImpl<CR>zt
+# nmap <silent> <Leader>r :LspShowReferences<CR>
+# nmap <silent> <Leader>o :LspOutline<CR>
+# nmap <silent> <Leader>h :LspHover<CR>:LspDiagCurrent<CR>
+# nmap <silent> <Leader>D :LspPeekDefinition<CR>
+# nmap <silent> <Leader>T :LspPeekTypeDef<CR>
+# nmap <silent> <Leader>I :LspPeekImpl<CR>
+# nmap <silent> <Leader>R :LspPeekReferences<CR>
+
+# Coc mappings
+# nmap <silent> [< :LspDiagFirst<CR>
+nmap <silent> [<Leader> <Plug>(coc-diagnostic-prev)
+nmap <silent> ]<Leader> <Plug>(coc-diagnostic-next)
+nmap <silent> <Leader>d <Plug>(coc-definition)
+nmap <silent> <Leader>t <Plug>(coc-type-definition)
+nmap <silent> <Leader>i <Plug>(coc-implementation)
+nmap <silent> <Leader>r <Plug>(coc-references)
+# nmap <silent> <Leader>o :LspOutline<CR>
+nmap <silent> <Leader>h :call CocActionAsync('doHover')<CR>
+# nmap <silent> <Leader>D :LspPeekDefinition<CR>
+# nmap <silent> <Leader>T :LspPeekTypeDef<CR>
+# nmap <silent> <Leader>I :LspPeekImpl<CR>
+# nmap <silent> <Leader>R :LspPeekReferences<CR>
+nmap <silent> <leader>q  <Plug>(coc-fix-current)
+
 
 # Custom Functions
 def RunNpmTest(): void
@@ -237,11 +254,12 @@ g:db_ui_table_helpers = {
      'Count': '{table}.count()'
    }
 }
-g:lspServers = [
-    {
-       'filetype': ['javascript', 'typescript', 'typescriptreact'],
-       'path': '/home/ec2-user/.nvm/versions/node/v16.15.0/bin/typescript-language-server',
-       'args': ['--stdio']
-    }
-]
-call LspAddServer(g:lspServers)
+# lsp support
+# g:lspServers = [
+#     {
+#        'filetype': ['javascript', 'typescript', 'typescriptreact'],
+#        'path': '/home/ec2-user/.nvm/versions/node/v16.15.0/bin/typescript-language-server',
+#        'args': ['--stdio']
+#     }
+# ]
+# call LspAddServer(g:lspServers)
