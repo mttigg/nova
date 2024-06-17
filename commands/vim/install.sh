@@ -17,7 +17,6 @@
 #      REVISION:  1
 #===============================================================================
 
-set -o nounset                                  # Treat unset variables as an error
 talk "Installing Plugin Manager..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 talk "Fetching colorscheme..."
@@ -30,17 +29,17 @@ cp ~/git/gruvbox/colors/gruvbox.vim ~/.vim/colors/
 talk "Installing LanguageServers..."
 npm i -g typescript typescript-language-server
 talk "Installing dependencies..."
-sudo yum install ncurses
+sudo yum install ncurses -y
 talk "Installing dependencies... ncurses"
-sudo yum install ncurses-devel
+sudo yum install ncurses-devel -y
 talk "Installing dependencies... libevent"
-sudo yum install libevent
+sudo yum install libevent -y
 sudo yum install libevent-devel
 talk "Installing dependencies... automake"
-sudo yum install automake
-sudo yum install autoconf
+sudo yum install automake -y
+sudo yum install autoconf -y
 talk "Installing dependencies... gcc"
-sudo yum install gcc
+sudo yum install gcc -y
 talk "Installing dependencies... python3.4"
 pyenv install 3.4.10
 

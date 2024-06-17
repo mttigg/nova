@@ -15,6 +15,7 @@ source ~/.nova/commands/git/configure.sh
 sleep 1
 
 talk "Secondly github"
+source ~/.nova/commands/gh/install.sh
 source ~/.nova/commands/gh/configure.sh
 sleep 1
 
@@ -29,6 +30,9 @@ source ~/.nova/commands/vim/install.sh
 source ~/.nova/commands/vim/configure.sh
 source ~/.nova/commands/bash/configure.sh
 sleep 1
+
+talk "Time to install the aws general development tools!"
+sudo yum groupinstall "Development Tools" -y
 
 talk "Okay..."
 

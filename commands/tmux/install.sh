@@ -17,20 +17,18 @@
 #      REVISION:  1
 #===============================================================================
 
-set -o nounset                                  # Treat unset variables as an error
-
 # !/bin/bash
 talk "Installing dependencies..."
-sudo yum install ncurses
-sudo yum install ncurses-devel
-sudo yum install libevent
-sudo yum install libevent-devel
-sudo yum install automake
-sudo yum install make
-sudo yum install bison
-sudo yum install pkg-config
-sudo yum install autoconf
-sudo yum install gcc
+sudo yum install ncurses -y
+sudo yum install ncurses-devel -y
+sudo yum install libevent -y
+sudo yum install libevent-devel -y
+sudo yum install automake -y
+sudo yum install make -y
+sudo yum install bison -y
+sudo yum install pkg-config -y
+sudo yum install autoconf -y
+sudo yum install gcc -y
 
 talk "Installing Tmux..."
 mkdir ~/git
