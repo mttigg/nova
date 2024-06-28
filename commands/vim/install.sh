@@ -66,3 +66,8 @@ sudo make
 
 talk "Installing VIM"
 sudo make install
+
+talk "Installing copilot"
+
+git clone https://github.com/github/copilot.vim.git \
+  ~/.vim/pack/github/start/copilot.vim
