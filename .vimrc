@@ -60,39 +60,27 @@ call plug#begin('~/.vim/plugged')
  Plug 'kristijanhusak/vim-dadbod-completion'
  Plug 'kristijanhusak/vim-dadbod-ui'
  Plug 'prettier/vim-prettier', { 'do': 'npm install --frozen-lockfile --production' }
-
-  # Debug
-  # Plug 'puremourning/vimspector'
-
-  # Color
-  Plug 'catppuccin/vim', { 'as': 'catppuccin' }
-
-  # Diagnostics
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'junegunn/vim-peekaboo'
 call plug#end()
 
-# colorscheme catppuccin_mocha
+
+if exists('+termguicolors')
+  &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 
-#
-# Lsp Config
-# using coc for now
-# packadd lsp
-# Goto code navigation.
-# nmap <silent> [< :LspDiagFirst<CR>
-# nmap <silent> [<Leader> :LspDiagPrev<CR>
-# nmap <silent> ]<Leader> :LspDiagNext<CR>
-# nmap <silent> <Leader>d :LspGotoDefinition<CR>zt
-# nmap <silent> <Leader>t :LspGotoTypeDef<CR>zt
-# nmap <silent> <Leader>i :LspGotoImpl<CR>zt
-# nmap <silent> <Leader>r :LspShowReferences<CR>
-# nmap <silent> <Leader>o :LspOutline<CR>
-# nmap <silent> <Leader>h :LspHover<CR>:LspDiagCurrent<CR>
-# nmap <silent> <Leader>D :LspPeekDefinition<CR>
-# nmap <silent> <Leader>T :LspPeekTypeDef<CR>
-# nmap <silent> <Leader>I :LspPeekImpl<CR>
-# nmap <silent> <Leader>R :LspPeekReferences<CR>
+# Copilot mappings
+imap <silent> <C-c>w <Plug>(copilot-accept-word)
+imap <silent> <C-c>$ <Plug>(copilot-accept-line)
+imap <silent> <C-c><C-c> <Plug>(copilot-dismiss)
+imap <silent> <C-c>] <Plug>(copilot-next)
+imap <silent> <C-c>[ <Plug>(copilot-previous)
+imap <silent> <C-c>\ <Plug>(copilot-suggest)
+nmap <silent> <Leader>c :Copilot panel<CR>
 
 # Coc mappings
 # nmap <silent> [< :LspDiagFirst<CR>
@@ -254,12 +242,5 @@ g:db_ui_table_helpers = {
      'Count': '{table}.count()'
    }
 }
-# lsp support
-# g:lspServers = [
-#     {
-#        'filetype': ['javascript', 'typescript', 'typescriptreact'],
-#        'path': '/home/ec2-user/.nvm/versions/node/v16.15.0/bin/typescript-language-server',
-#        'args': ['--stdio']
-#     }
-# ]
-# call LspAddServer(g:lspServers)
+# 
+# lua require('nvim-llama').setup({})
